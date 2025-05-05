@@ -17,10 +17,10 @@
 #
 pkgbase="zfs-linux-lts"
 pkgname=("zfs-linux-lts" "zfs-linux-lts-headers")
-_zfsver="2.3.1"
-_kernelver="6.12.20-1"
-_kernelver_full="6.12.20-1"
-_extramodules="6.12.20-1-lts"
+_zfsver="2.3.2"
+_kernelver="6.12.26-1"
+_kernelver_full="6.12.26-1"
+_extramodules="6.12.26-1-lts"
 
 pkgver="${_zfsver}_$(echo ${_kernelver} | sed s/-/./g)"
 pkgrel=1
@@ -28,7 +28,7 @@ makedepends=("linux-lts-headers=${_kernelver}")
 arch=("x86_64")
 url="https://openzfs.org/"
 source=("https://github.com/openzfs/zfs/releases/download/zfs-${_zfsver}/zfs-${_zfsver}.tar.gz")
-sha256sums=("053233799386920bdc636e22d0e19a8c2c3e642e8bd847ff87e108f8bb1f9006")
+sha256sums=("80da628a9543ec3355bf410617450e167706948ceb287541455a1b8d87b8758a")
 license=("CDDL")
 depends=("kmod" "zfs-utils=${_zfsver}" "linux-lts=${_kernelver}")
 
